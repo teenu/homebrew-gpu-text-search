@@ -19,8 +19,8 @@ class GpuTextSearch < Formula
     system "swift", "build", *args
     bin.install ".build/release/search-cli" => "gpu-text-search"
 
-    # Install the Metal resource bundle in lib directory for Homebrew compatibility  
-    lib.install ".build/release/GPUTextSearch_SearchEngine.bundle"
+    # Install the Metal resource bundle alongside the executable for compatibility
+    bin.install ".build/release/GPUTextSearch_SearchEngine.bundle"
   end
 
   test do
