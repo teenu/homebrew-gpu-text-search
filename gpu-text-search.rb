@@ -22,6 +22,11 @@ class GpuTextSearch < Formula
     # Install the Metal resource bundle alongside the executable for compatibility
     bin.install ".build/release/GPUTextSearch_SearchEngine.bundle"
   end
+  
+  def post_install
+    # Create symlink for bundle in global bin directory to match executable location
+    (HOMEBREW_PREFIX/"bin"/"GPUTextSearch_SearchEngine.bundle").make_symlink(bin/"GPUTextSearch_SearchEngine.bundle")
+  end
 
   test do
     # Create test file for pattern matching
