@@ -6,7 +6,7 @@ class GpuTextSearch < Formula
   homepage "https://github.com/teenu/gpu-text-search"
   url "https://github.com/teenu/gpu-text-search.git",
       tag:      "v2.3.2",
-      revision: "ed661e4eb8bd14c2bca28f62fcfec6180508afaf"
+      revision: "e330314716267eb8c9f9dc9840b2667b1dec9adc"
   license "MIT"
   head "https://github.com/teenu/gpu-text-search.git", branch: "main"
 
